@@ -19,10 +19,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
         fields="__all__"
         read_only_fields=["id", "bmr", "owner"]
 
-
-
 class FoodLogSerializer(serializers.ModelSerializer):
     class Meta:
         model=FoodLog
         fields="__all__"
-        READ=["id", "owner", "created_at"]
+        read_only_fields=["id", "owner", "created_at"]
